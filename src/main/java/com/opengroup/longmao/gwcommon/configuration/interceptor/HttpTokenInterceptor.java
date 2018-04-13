@@ -75,7 +75,6 @@ public class HttpTokenInterceptor extends HandlerInterceptorAdapter {
 				String subject = JwtUtil.generalSubject(user);
 				token = jwt.createJWT(ConfigConstant.JWT_ID, subject, ConfigConstant.JWT_TTL);
 				refreshtoken=jwt.createJWT(ConfigConstant.JWT_ID, subject, ConfigConstant.JWT_REFRESH_TTL);
-				//cache.set(ConfigConstant.JWT_TOKEN, token.trim(), user, CommConstant.JWT_TTL/1000);
 				redis.set(ConfigConstant.JWT_TOKEN, token.trim(), user, ConfigConstant.JWT_TTL/1000);
 				response.addHeader(ConfigConstant.TOKEN, token);
 				response.addHeader(ConfigConstant.REFRESH_TOKEN, refreshtoken);
@@ -85,7 +84,7 @@ public class HttpTokenInterceptor extends HandlerInterceptorAdapter {
 					if(StringUtils.isEmpty(user.get("userId"))){
 						return false;
 					}else{
-						User u = userService.queryUserByUserId(user.get("userId").toString());
+						User u = new User();//userService.queryUserByUserId(user.get("userId").toString());
 						if(null==u){
 							return false;
 						}
