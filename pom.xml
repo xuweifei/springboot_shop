@@ -3,16 +3,16 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>com.opengroup.longmao</groupId>
-	<artifactId>totoro-user</artifactId>
+	<groupId>com.dididi</groupId>
+	<artifactId>boot_shop</artifactId>
 	<!-- 	稳定版</version> -->
 <!-- 	<version>1.0.0-RELEASE</version> -->
     <!-- 	开发版</version> -->
-	<version>3.0.1-SNAPSHOT</version>
+	<version>1.0.0-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>totoro-user</name>
-	<description>totoro user project for Spring Boot</description>
+	<name>boot_shop</name>
+	<description>hello agua</description>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
