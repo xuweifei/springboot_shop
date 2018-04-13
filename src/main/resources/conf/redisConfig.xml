@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+                        http://www.springframework.org/schema/beans/spring-beans.xsd">
+                        
+                        
+    <bean id="initSeqId" class="com.opengroup.longmao.gwcommon.configuration.redis.RedisValConfig">
+         <property name="prefix"  value="CACHE_ID_GEN_"/>
+   		 <property name="key" value="
+   		 				      Activity,
+   		 				      Attentions,
+   		 				      BeanAccount,
+   		 				      BeanChangeRecord,
+   		 				      CoinAccount,
+   		 				      CoinChangeRecord,
+   		 				      User,
+   		 				      AnchorCreditFlow,
+   		 				      IdentityInfo,
+   		 				      AnchorCreditRule,
+   		 				      AnchorDeductionRule,
+   		 				      AnchorPlusRule,
+   		 				      ChlInfo,
+   		 				      OrderBuyDetail,
+   		 				      OrderInfo,
+   		 				      OrderTradeFlow,
+   		 				      UserLevel,
+   		 				      UserGradeRule,
+   		 				      LoginRecord,
+							  LmSmsMessage,
+							  PhotoAlbum,
+							  AuthInfo,
+							  OpalChangeRecord,
+							  ExpChangeRecord,
+							  UserInvite,
+							  UserIdentityAuth,
+   		 				      "
+   		  /> 
+    </bean>
+
+</beans>
